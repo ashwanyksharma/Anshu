@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Dark theme design system */
+    --background: 0 0% 4%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 95%;
+
+    /* Orange brand color */
+    --primary: 16 100% 50%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 16 100% 50%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 16 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom design tokens */
+    --hero-bg: 0 0% 4%;
+    --brand-orange: 16 100% 50%;
+    --brand-orange-hover: 16 100% 45%;
+    --text-primary: 0 0% 95%;
+    --text-secondary: 0 0% 75%;
+    --surface: 0 0% 8%;
+    --surface-hover: 0 0% 12%;
+
+    /* Gradients */
+    --gradient-radial: radial-gradient(
+      circle at 50% 50%,
+      hsl(var(--brand-orange) / 0.1) 0%,
+      transparent 50%
+    );
+    --gradient-conic: conic-gradient(
+      from 180deg at 50% 50%,
+      hsl(var(--brand-orange) / 0.1) 0deg,
+      transparent 60deg,
+      hsl(var(--brand-orange) / 0.1) 120deg,
+      transparent 180deg
+    );
+
+    /* Animations */
+    --animate-slow: 8s linear infinite;
+    --animate-bounce: 1s ease-in-out infinite alternate;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Keep same values as root since we're using dark theme by default */
+    --background: 0 0% 4%;
+    --foreground: 0 0% 95%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased scroll-smooth;
+    font-family: "Montserrat", sans-serif;
+    /* Improve text rendering on mobile */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Prevent horizontal scrolling on mobile */
+    overflow-x: hidden;
+    /* Improve touch scrolling on iOS */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Prevent body scroll when mobile menu is open */
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  /* Responsive typography */
+  html {
+    scroll-behavior: smooth;
+    /* Base font size for better mobile readability */
+    font-size: 16px;
+  }
+
+  @media (max-width: 640px) {
+    html {
+      font-size: 14px;
+    }
+  }
+
+  /* Better mobile viewport handling */
+  @media screen and (max-width: 768px) {
+    .hero-text {
+      word-break: break-word;
+      hyphens: auto;
+    }
+  }
+
+  /* Improve touch targets on mobile */
+  @media (max-width: 768px) {
+    button,
+    a {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
+
+  .hero-text {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--text-primary)),
+      hsl(var(--brand-orange))
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .logo-scroll {
+    animation: scroll var(--animate-slow);
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .floating {
+    animation: float var(--animate-bounce);
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Responsive breakpoint utilities */
+  .xs\:flex-row {
+    @media (min-width: 475px) {
+      flex-direction: row;
+    }
+  }
+
+  .xs\:w-auto {
+    @media (min-width: 475px) {
+      width: auto;
+    }
+  }
+
+  /* Better focus styles for accessibility */
+  *:focus-visible {
+    outline: 2px solid hsl(var(--brand-orange));
+    outline-offset: 2px;
+  }
+
+  /* Improved button hover states on touch devices */
+  @media (hover: hover) {
+    .hover\:scale-105:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  /* Prevent zoom on input focus for iOS */
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+
+  /* Smooth scrolling with reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    .logo-scroll {
+      animation: none;
+    }
+
+    .floating {
+      animation: none;
+    }
+
+    * {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+    }
+  }
+}
