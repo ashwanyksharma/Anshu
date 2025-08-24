@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroBg from "@/assets/hero-bg.png";
+import heroBg from "@/assets/hero-bg.avif";
 import logoImage from "@/assets/logo.png";
 import lenovoLogo from "@/assets/brand-logos/Lenovo.png";
 import wowLogo from "@/assets/brand-logos/Wow skin science.png";
@@ -55,7 +55,7 @@ const HeroSection = () => {
       <div className="rounded-3xl border border-border/70 bg-background/50 backdrop-blur-sm overflow-hidden relative">
         {/* Background Image */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20 rounded-3xl"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-70 rounded-3xl"
           style={{ backgroundImage: `url(${heroBg})` }}
         />
 
@@ -90,25 +90,34 @@ const HeroSection = () => {
             </div>
 
             {/* CTA Button */}
-            <Button variant="hero" className="hidden md:inline-flex">
-              Get Started
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="ml-2"
-              >
-                <path
-                  d="M7 17L17 7M17 7H7M17 7V17"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </Button>
+            <Button 
+  variant="hero" 
+  className="hidden md:inline-flex"
+  onClick={() =>
+    window.open(
+      "https://wa.me/message/IQTHGYV7MGIIL1",
+      "_blank"
+    )
+  }
+>
+  Get Started
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className="ml-2"
+  >
+    <path
+      d="M7 17L17 7M17 7H7M17 7V17"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+</Button>
 
             {/* Mobile Menu Button */}
             <Button variant="ghost" size="icon" className="md:hidden">
@@ -219,7 +228,7 @@ const LogoCarousel = () => {
   ];
 
   // Duplicate logos for seamless loop
-  const duplicatedLogos = [...logos, ...logos, ...logos];
+  const duplicatedLogos = [...logos, ...logos, ...logos, ...logos, ...logos, ...logos];
 
   return (
     <div className="container mx-auto px-8 max-w-5xl ">

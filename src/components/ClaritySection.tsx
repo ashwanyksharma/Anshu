@@ -31,12 +31,29 @@ function ClaritySection() {
             </span>
           </div>
           <h2
-            id="clarity-heading"
-            className="text-3xl md:text-5xl font-bold text-text-primary max-w-4xl mx-auto leading-tight"
-          >
-            FROM CLARITY TO SCALE —
-            <span className="block mt-2">WITHOUT THE GUESSWORK</span>
-          </h2>
+  id="clarity-heading"
+  className="text-3xl md:text-5xl font-bold text-text-primary max-w-4xl mx-auto leading-tight"
+>
+  {"FROM CLARITY TO SCALE —".split("").map((letter, i) => (
+    <span
+      key={i}
+      className="inline-block transition-all duration-300 hover:scale-150 hover:-rotate-3 hover:text-orange-500 cursor-default"
+    >
+      {letter === " " ? "\u00A0" : letter}
+    </span>
+  ))}
+  <span className="block mt-2">
+    {"WITHOUT THE GUESSWORK".split("").map((letter, i) => (
+      <span
+        key={i}
+        className="inline-block transition-all duration-300 hover:scale-150 hover:-rotate-3 hover:text-orange-500 cursor-default"
+      >
+        {letter === " " ? "\u00A0" : letter}
+      </span>
+    ))}
+  </span>
+</h2>
+
         </div>
 
         {/* Features Grid */}

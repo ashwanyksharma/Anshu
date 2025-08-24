@@ -6,31 +6,31 @@ const creators = [
     id: 1,
     name: "Anik Jain",
     followers: "450K followers",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+    image: "/public/Images/Anik jain.png",
   },
   {
     id: 2,
     name: "Vir Saini", 
     followers: "150K followers",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+    image: "/public/Images/Vir Saini.png",
   },
   {
     id: 3,
     name: "Surbhi Gandhi",
     followers: "66K followers",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+    image: "/public/Images/Surbhi Gandhi.png",
   },
   {
     id: 4,
     name: "Amrit Talks",
     followers: "59K followers",
-    image: "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?w=400&h=400&fit=crop&crop=face",
+    image: "/public/Images/Amrit talks.png",
   },
   {
     id: 5,
     name: "Dinesh Thakkar",
     followers: "79K followers",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
+    image: "/public/Images/Dinesh Thakkar.png",
   },
 ];
 
@@ -40,13 +40,21 @@ function CreatorsSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <h2
-            id="creators-heading"
-            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-orange-500 uppercase tracking-tight mb-2 px-2"
-          >
-            CREATORS WE'VE WORKED WITH
-          </h2>
-        </div>
+  <h2
+    id="creators-heading"
+    className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-orange-500 uppercase tracking-tight mb-2 px-2"
+  >
+    {"CREATORS WE'VE WORKED WITH".split("").map((letter, i) => (
+      <span
+        key={i}
+        className="inline-block transition-transform duration-300 hover:scale-150 hover:-rotate-6 cursor-default"
+      >
+        {letter === " " ? "\u00A0" : letter}
+      </span>
+    ))}
+  </h2>
+</div>
+
 
         {/* Creator Cards - Mobile: Grid, Desktop: Horizontal scroll */}
         <div className="lg:hidden grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
