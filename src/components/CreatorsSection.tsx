@@ -6,31 +6,31 @@ const creators = [
     id: 1,
     name: "Anik Jain",
     followers: "450K followers",
-    image: "/public/Images/Anik jain.png",
+    image: "/Images/Anik jain.png",
   },
   {
     id: 2,
     name: "Vir Saini", 
     followers: "150K followers",
-    image: "/public/Images/Vir Saini.png",
+    image: "/Images/Vir Saini.png",
   },
   {
     id: 3,
     name: "Surbhi Gandhi",
     followers: "66K followers",
-    image: "/public/Images/Surbhi Gandhi.png",
+    image: "/Images/Surbhi Gandhi.png",
   },
   {
     id: 4,
     name: "Amrit Talks",
     followers: "59K followers",
-    image: "/public/Images/Amrit talks.png",
+    image: "/Images/Amrit talks.png",
   },
   {
     id: 5,
     name: "Dinesh Thakkar",
     followers: "79K followers",
-    image: "/public/Images/Dinesh Thakkar.png",
+    image: "/Images/Dinesh Thakkar.png",
   },
 ];
 
