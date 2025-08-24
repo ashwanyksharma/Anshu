@@ -6,25 +6,29 @@ const TestimonialsSection = () => {
       rating: 5,
       text: "Great. These helped us build outstanding UX for our customers. Our Signit. Team had a wonderful time during this program.",
       author: "Darlene Robertson",
-      company: "Director of Sales at SignIt"
+      company: "Director of Sales at SignIt",
+      image: "/Images/1.png", // ✅ add real image
     },
     {
       rating: 5,
-      text: "Spark Trend has helped us create more value with their confidence. Our SignIt. Team had a wonderful time with the outstanding UX team and achieved all of our goals.",
+      text: "Spark Trend has helped us create more value with their confidence. Team had a wonderful time with the outstanding UX team and achieved all of our goals.",
       author: "Gary Coleman",
-      company: "Art Director at SigmaSoft"
+      company: "Art Director at SigmaSoft",
+      image: "/Images/2.png",
     },
     {
       rating: 5,
       text: "Great work quality. Jane built something nice with fast. They collaborated well with our team helping set their goals to team work through.",
       author: "Ruby Walker",
-      company: "CEO Founder at InnovatTech"
+      company: "CEO Founder at InnovatTech",
+      image: "/Images/3.png",
     },
     {
       rating: 5,
       text: "These wonderful and beautiful many other tools and stuff it's wonderful and beautiful working with those people.",
       author: "Leslie Alexander",
-      company: "Founder at CreativeStudio"
+      company: "Founder at CreativeStudio",
+      image: "/Images/4.png",
     }
   ];
 
@@ -69,9 +73,12 @@ const TestimonialsSection = () => {
               
               {/* Author */}
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-gradient-to-br from-brand-orange to-brand-orange-hover rounded-full flex items-center justify-center text-primary-foreground font-semibold text-sm">
-                  {testimonial.author.split(' ').map(n => n[0]).join('')}
-                </div>
+                <img
+                  src={testimonial.image}
+                  alt={testimonial.author}
+                  className="w-10 h-10 rounded-full object-cover"
+                  loading="lazy"
+                />
                 <div>
                   <div className="text-text-primary font-medium text-sm">
                     {testimonial.author}
