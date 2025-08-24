@@ -4,7 +4,7 @@ import React from "react";
 const creators = [
   {
     id: 1,
-    name: "Anik Jain",
+    name: "Anik jain",
     followers: "450K followers",
     image: "/Images/Anik jain.png",
   },
