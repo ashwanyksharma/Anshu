@@ -6,7 +6,7 @@ const creators = [
     id: 1,
     name: "Anik jain",
     followers: "450K followers",
-    image: "/Images/Anik jain.png",
+    image: "/Images/Anik Jain.png",
   },
   {
     id: 2,
