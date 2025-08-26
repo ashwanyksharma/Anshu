@@ -4,21 +4,21 @@ import { Button } from "@/components/ui/button";
 const FAQSection = () => {
   const faqs = [
     {
-      question: "What services does Spark Trend offer?",
-      answer: "We specialize in website design and development, digital marketing strategies, brand identity creation, SEO optimization, and social media management to help your business grow online."
+      question: "What makes Spark Trend different from other agencies?",
+      answer: "Most agencies jump straight into design or campaigns. We don’t.We start with clarity — decoding your audience, competitors, and brand DNA.That way, every design, story, and campaign is built on truth, not guesswork."
     },
     {
-      question: "How long does it take to complete a project?",
-      answer: "Project timelines vary depending on scope and complexity. Typically, website projects take 4-8 weeks, while comprehensive marketing campaigns can take 2-3 months to fully implement and optimize."
+      question: "Do you only work on branding, or also marketing?",
+      answer: "Both. Branding defines who you are, marketing takes you where you need to go.We design identities that last — and then activate them with campaigns that sell.One without the other is fragile; we bring them together."
     },
     {
-      question: "What is your pricing structure?",
-      answer: "Our pricing is project-based and tailored to your specific needs and budget. We offer transparent pricing with no hidden fees. Contact us for a detailed quote based on your requirements."
-    },
-    {
-      question: "Do you provide ongoing support after project completion?",
-      answer: "Yes, we offer various maintenance and support packages to ensure your website and marketing campaigns continue to perform optimally. We're here to help your business grow long-term."
+      question: "Who is Spark Trend the right fit for",
+      answer: "We work best with brands serious about growth — whether early-stage or established.If you’re chasing quick fixes or vanity work, we’re not your partner.If you want identity, clarity, and traction — we’ll fit right in."
     }
+    // {
+    //   question: "Do you provide ongoing support after project completion?",
+    //   answer: "Yes, we offer various maintenance and support packages to ensure your website and marketing campaigns continue to perform optimally. We're here to help your business grow long-term."
+    // }
   ];
 
   const handleScheduleCall = () => {
