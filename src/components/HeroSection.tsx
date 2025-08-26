@@ -50,14 +50,29 @@ const HeroSection = () => {
     Cal.ns["30min"]("ui", { hideEventTypeDetails: false, layout: "month_view" });
   }, []);
 
+  // Helper to animate letters
+  const AnimatedText = ({ text }: { text: string }) => (
+    <span>
+      {text.split("").map((char, i) => (
+        <span
+          key={i}
+          className="inline-block transition-transform duration-300 ease-in-out hover:scale-125"
+        >
+          {char === " " ? "\u00A0" : char}
+        </span>
+      ))}
+    </span>
+  );
+
   return (
     <div className="container mx-auto px-0 py-8">
       <div className="rounded-3xl border border-border/70 bg-background/50 backdrop-blur-sm overflow-hidden relative">
-        {/* Background Image */}
+        {/* Background Image with custom height */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-70 rounded-3xl"
-          style={{ backgroundImage: `url(${heroBg})` }}
-        />
+  className="absolute top-0 left-0 w-full h-[90vh] bg-cover bg-center bg-no-repeat opacity-70 rounded-3xl"
+  style={{ backgroundImage: `url(${heroBg})` }}
+/>
+
 
         {/* Integrated Navigation */}
         <nav className="relative z-50">
@@ -90,34 +105,31 @@ const HeroSection = () => {
             </div>
 
             {/* CTA Button */}
-            <Button 
-  variant="hero" 
-  className="hidden md:inline-flex"
-  onClick={() =>
-    window.open(
-      "https://wa.me/message/IQTHGYV7MGIIL1",
-      "_blank"
-    )
-  }
->
-  Get Started
-  <svg
-    width="16"
-    height="16"
-    viewBox="0 0 24 24"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    className="ml-2"
-  >
-    <path
-      d="M7 17L17 7M17 7H7M17 7V17"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-</Button>
+            <Button
+              variant="hero"
+              className="hidden md:inline-flex"
+              onClick={() =>
+                window.open("https://wa.me/message/IQTHGYV7MGIIL1", "_blank")
+              }
+            >
+              Get Started
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="ml-2"
+              >
+                <path
+                  d="M7 17L17 7M17 7H7M17 7V17"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </Button>
 
             {/* Mobile Menu Button */}
             <Button variant="ghost" size="icon" className="md:hidden">
@@ -149,17 +161,17 @@ const HeroSection = () => {
           {/* Main Content */}
           <div className="flex-1 flex items-center justify-center py-16">
             <div className="px-8 text-left relative z-10 max-w-5xl mx-auto">
-              {/* Main Headline */}
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-relaxed mb-16 tracking-tight">
-                <span className="block hero-text mb-2">
-                  BUILD POWERFUL AGENCY SITES
-                </span>
-                <span className="block hero-text mb-2">
-                  WITH CUTTING-EDGE DESIGN
-                </span>
-                <span className="block hero-text">
-                  AND MARKETING SOLUTIONS
-                </span>
+              {/* Main Headline with animated letters */}
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-relaxed mb-16 tracking-tight space-y-2">
+                <div>
+                  <AnimatedText text="BUILD POWERFUL AGENCY SITES" />
+                </div>
+                <div>
+                  <AnimatedText text="WITH CUTTING-EDGE DESIGN" />
+                </div>
+                <div>
+                  <AnimatedText text="AND MARKETING SOLUTIONS" />
+                </div>
               </h1>
 
               {/* CTA Buttons */}
@@ -194,10 +206,7 @@ const HeroSection = () => {
                   size="lg"
                   className="text-base px-8 py-4 rounded-full"
                   onClick={() =>
-                    window.open(
-                      "https://wa.me/message/IQTHGYV7MGIIL1",
-                      "_blank"
-                    )
+                    window.open("https://wa.me/message/IQTHGYV7MGIIL1", "_blank")
                   }
                 >
                   Reach out
@@ -228,7 +237,14 @@ const LogoCarousel = () => {
   ];
 
   // Duplicate logos for seamless loop
-  const duplicatedLogos = [...logos, ...logos, ...logos, ...logos, ...logos, ...logos];
+  const duplicatedLogos = [
+    ...logos,
+    ...logos,
+    ...logos,
+    ...logos,
+    ...logos,
+    ...logos,
+  ];
 
   return (
     <div className="container mx-auto px-8 max-w-5xl ">

@@ -1,4 +1,3 @@
-
 import React from "react";
 
 const creators = [
@@ -36,29 +35,32 @@ const creators = [
 
 function CreatorsSection() {
   return (
-    <section className="py-16 sm:py-24 lg:py-32 bg-black" id="creators" aria-labelledby="creators-heading">
+    <section
+      className="py-16 sm:py-24 lg:py-32 bg-black"
+      id="creators"
+      aria-labelledby="creators-heading"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-  <h2
-    id="creators-heading"
-    className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-orange-500 uppercase tracking-tight mb-2 px-2"
-  >
-    {"CREATORS WE'VE WORKED WITH".split("").map((letter, i) => (
-      <span
-        key={i}
-        className="inline-block transition-transform duration-300 hover:scale-150 hover:-rotate-6 cursor-default"
-      >
-        {letter === " " ? "\u00A0" : letter}
-      </span>
-    ))}
-  </h2>
-</div>
+          <h2
+            id="creators-heading"
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-orange-500 uppercase tracking-tight mb-2 px-2"
+          >
+            {"CREATORS WE'VE WORKED WITH".split("").map((letter, i) => (
+              <span
+                key={i}
+                className="inline-block transition-transform duration-300 hover:scale-150 hover:-rotate-6 hover:text-white cursor-default"
+              >
+                {letter === " " ? "\u00A0" : letter}
+              </span>
+            ))}
+          </h2>
+        </div>
 
-
-        {/* Creator Cards - Mobile: Grid, Desktop: Horizontal scroll */}
+        {/* Creator Cards - Mobile: Grid */}
         <div className="lg:hidden grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
-          {creators.slice(0, 4).map((creator) => (
+          {creators.map((creator) => (
             <div key={creator.id} className="group">
               <div className="bg-zinc-900/60 backdrop-blur-sm rounded-xl p-3 shadow-xl hover:shadow-2xl transition-all duration-300 hover:bg-zinc-900/80 border border-zinc-800/50 flex flex-col items-center">
                 {/* Profile Image */}
@@ -73,11 +75,15 @@ function CreatorsSection() {
                     />
                   </div>
                 </div>
-                
+
                 {/* Creator Info */}
                 <div className="text-center">
-                  <p className="text-gray-400 text-xs mb-1 font-medium">{creator.followers}</p>
-                  <h3 className="text-white font-bold text-sm leading-tight">{creator.name}</h3>
+                  <p className="text-gray-400 text-xs mb-1 font-medium">
+                    {creator.followers}
+                  </p>
+                  <h3 className="text-white font-bold text-sm leading-tight">
+                    {creator.name}
+                  </h3>
                 </div>
               </div>
             </div>
@@ -102,11 +108,15 @@ function CreatorsSection() {
                       />
                     </div>
                   </div>
-                  
+
                   {/* Creator Info */}
                   <div>
-                    <p className="text-gray-400 text-sm mb-2 font-medium">{creator.followers}</p>
-                    <h3 className="text-white font-bold text-lg leading-tight">{creator.name}</h3>
+                    <p className="text-gray-400 text-sm mb-2 font-medium">
+                      {creator.followers}
+                    </p>
+                    <h3 className="text-white font-bold text-lg leading-tight">
+                      {creator.name}
+                    </h3>
                   </div>
                 </div>
               </div>
