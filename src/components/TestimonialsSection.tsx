@@ -5,28 +5,28 @@ const TestimonialsSection = () => {
     {
       rating: 5,
       text: "Great. These helped us build outstanding UX for our customers. Our Signit. Team had a wonderful time during this program.",
-      author: "Darlene Robertson",
+      author: "Kailash J",
       company: "Director of Sales at SignIt",
       image: "/Images/1.png", // ✅ add real image
     },
     {
       rating: 5,
       text: "Spark Trend has helped us create more value with their confidence. Team had a wonderful time with the outstanding UX team and achieved all of our goals.",
-      author: "Gary Coleman",
+      author: "Kamil Konior",
       company: "Art Director at SigmaSoft",
       image: "/Images/2.png",
     },
     {
       rating: 5,
       text: "Great work quality. Jane built something nice with fast. They collaborated well with our team helping set their goals to team work through.",
-      author: "Ruby Walker",
+      author: "Rakesh aggarwal",
       company: "CEO Founder at InnovatTech",
       image: "/Images/3.png",
     },
     {
       rating: 5,
       text: "These wonderful and beautiful many other tools and stuff it's wonderful and beautiful working with those people.",
-      author: "Leslie Alexander",
+      author: "Komalpreet kaur",
       company: "Founder at CreativeStudio",
       image: "/Images/4.png",
     }
