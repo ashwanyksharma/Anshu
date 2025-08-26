@@ -50,36 +50,21 @@ const HeroSection = () => {
     Cal.ns["30min"]("ui", { hideEventTypeDetails: false, layout: "month_view" });
   }, []);
 
-  // Helper to animate letters
-  const AnimatedText = ({ text }: { text: string }) => (
-    <span>
-      {text.split("").map((char, i) => (
-        <span
-          key={i}
-          className="inline-block transition-transform duration-300 ease-in-out hover:scale-125"
-        >
-          {char === " " ? "\u00A0" : char}
-        </span>
-      ))}
-    </span>
-  );
-
   return (
-    <div className="container mx-auto px-0 py-8">
+    <div className="container mx-auto px-0 py-4 sm:py-8">
       <div className="rounded-3xl border border-border/70 bg-background/50 backdrop-blur-sm overflow-hidden relative">
-        {/* Background Image with custom height */}
+        {/* Background Image */}
         <div
-  className="absolute top-0 left-0 w-full h-[90vh] bg-cover bg-center bg-no-repeat opacity-70 rounded-3xl"
-  style={{ backgroundImage: `url(${heroBg})` }}
-/>
-
+          className="absolute top-0 left-0 w-full h-[90vh] bg-cover bg-center bg-no-repeat opacity-70 rounded-3xl"
+          style={{ backgroundImage: `url(${heroBg})` }}
+        />
 
         {/* Integrated Navigation */}
         <nav className="relative z-50">
-          <div className="px-8 py-6 flex items-center justify-between">
+          <div className="px-6 sm:px-8 py-4 sm:py-6 flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center">
-              <img src={logoImage} alt="Logo" className="w-12 h-12 mr-2" />
+              <img src={logoImage} alt="Logo" className="w-10 h-10 sm:w-12 sm:h-12 mr-2" />
             </div>
 
             {/* Navigation Links */}
@@ -157,28 +142,24 @@ const HeroSection = () => {
         </nav>
 
         {/* Hero Content */}
-        <section className="min-h-[80vh] flex flex-col justify-center relative">
-          {/* Main Content */}
-          <div className="flex-1 flex items-center justify-center py-16">
-            <div className="px-8 text-left relative z-10 max-w-5xl mx-auto">
-              {/* Main Headline with animated letters */}
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-relaxed mb-16 tracking-tight space-y-2">
-                <div>
-                  <AnimatedText text="BUILD POWERFUL AGENCY SITES" />
-                </div>
-                <div>
-                  <AnimatedText text="WITH CUTTING-EDGE DESIGN" />
-                </div>
-                <div>
-                  <AnimatedText text="AND MARKETING SOLUTIONS" />
-                </div>
+        <section className="min-h-[75vh] flex flex-col justify-center relative">
+          <div className="flex-1 flex items-center justify-start py-4 sm:py-12">
+            <div className="px-6 sm:px-8 text-left relative z-10 max-w-4xl">
+              {/* Headline */}
+              <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-5xl font-bold leading-snug mb-6 sm:mb-10 tracking-tight 
+                bg-gradient-to-r from-[#ff6f61] via-[#ff3c2b] to-[#ff6f61] bg-clip-text text-transparent">
+                WE HELP YOU FIND WHAT'S OFF,
+                <br />
+                RETHINK WHAT MATTERS,
+                <br />
+                AND SCALE WHAT WORKS
               </h1>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-6 items-start mb-20">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 items-stretch sm:items-center w-full sm:w-auto mb-4 sm:mb-0">
                 <Button
                   size="lg"
-                  className="text-base px-8 py-4 rounded-full"
+                  className="w-full sm:w-auto bg-[rgb(228,40,0)] hover:bg-[#c53000] text-black text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-full"
                   data-cal-link="spark-trend-clarity-call/30min"
                   data-cal-namespace="30min"
                   data-cal-config='{"layout":"month_view"}'
@@ -204,7 +185,7 @@ const HeroSection = () => {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="text-base px-8 py-4 rounded-full"
+                  className="w-full sm:w-auto border border-white text-white hover:bg-white/10 text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-full"
                   onClick={() =>
                     window.open("https://wa.me/message/IQTHGYV7MGIIL1", "_blank")
                   }
@@ -216,7 +197,7 @@ const HeroSection = () => {
           </div>
 
           {/* Logo Carousel at Bottom */}
-          <div className="relative z-10 pb-12 mt-auto">
+          <div className="relative z-10 pb-6 sm:pb-12 mt-4 sm:mt-auto">
             <LogoCarousel />
           </div>
         </section>
@@ -236,27 +217,18 @@ const LogoCarousel = () => {
     { src: groheLogo, alt: "GROHE", width: "w-20" },
   ];
 
-  // Duplicate logos for seamless loop
-  const duplicatedLogos = [
-    ...logos,
-    ...logos,
-    ...logos,
-    ...logos,
-    ...logos,
-    ...logos,
-  ];
+  const duplicatedLogos = [...logos, ...logos, ...logos, ...logos, ...logos, ...logos];
 
   return (
-    <div className="container mx-auto px-8 max-w-5xl ">
-      <div className="overflow-hidden border-t border-border/30 pt-8 relative">
+    <div className="container mx-auto px-6 sm:px-8 max-w-5xl">
+      <div className="overflow-hidden border-t border-border/30 pt-6 sm:pt-8 relative">
         {/* Left shadow fade */}
-        <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none"></div>
-
+        <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-16 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none"></div>
         {/* Right shadow fade */}
-        <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-16 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none"></div>
 
         <div className="relative">
-          <div className="flex space-x-16 items-center logo-scroll">
+          <div className="flex space-x-10 sm:space-x-16 items-center logo-scroll">
             {duplicatedLogos.map((logo, index) => (
               <div
                 key={index}
