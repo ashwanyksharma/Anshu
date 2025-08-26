@@ -72,56 +72,57 @@ const Navigation = () => {
       </div>
 
       {/* Mobile Dropdown */}
-      {isOpen && (
-        <div className="md:hidden bg-background border-t border-border px-6 py-4 space-y-4 animate-in slide-in-from-top duration-300">
-          <a
-            href="#services"
-            onClick={closeMenu}
-            className="block text-text-secondary hover:text-text-primary transition"
-          >
-            Services
-          </a>
-          <a
-            href="#testimonials"
-            onClick={closeMenu}
-            className="block text-text-secondary hover:text-text-primary transition"
-          >
-            Testimonials
-          </a>
-          <a
-            href="#faq"
-            onClick={closeMenu}
-            className="block text-text-secondary hover:text-text-primary transition"
-          >
-            FAQ
-          </a>
+{isOpen && (
+  <div className="absolute top-full left-0 right-0 md:hidden bg-background/95 backdrop-blur-md border-t border-border px-6 py-6 space-y-4 shadow-lg animate-in slide-in-from-top duration-300 z-50">
+    <a
+      href="#services"
+      onClick={closeMenu}
+      className="block text-text-secondary hover:text-text-primary transition"
+    >
+      Services
+    </a>
+    <a
+      href="#testimonials"
+      onClick={closeMenu}
+      className="block text-text-secondary hover:text-text-primary transition"
+    >
+      Testimonials
+    </a>
+    <a
+      href="#faq"
+      onClick={closeMenu}
+      className="block text-text-secondary hover:text-text-primary transition"
+    >
+      FAQ
+    </a>
 
-          {/* Mobile CTA */}
-          <Button
-            variant="hero"
-            className="w-full"
-            onClick={closeMenu}
-          >
-            Get Started
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="ml-2"
-            >
-              <path
-                d="M7 17L17 7M17 7H7M17 7V17"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </Button>
-        </div>
-      )}
+    {/* Mobile CTA */}
+    <Button
+      variant="hero"
+      className="w-full"
+      onClick={closeMenu}
+    >
+      Get Started
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="ml-2"
+      >
+        <path
+          d="M7 17L17 7M17 7H7M17 7V17"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </Button>
+  </div>
+)}
+
     </nav>
   );
 };

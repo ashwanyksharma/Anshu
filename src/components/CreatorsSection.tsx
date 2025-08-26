@@ -58,37 +58,38 @@ function CreatorsSection() {
           </h2>
         </div>
 
-        {/* Creator Cards - Mobile: Grid */}
-        <div className="lg:hidden grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
-          {creators.map((creator) => (
-            <div key={creator.id} className="group">
-              <div className="bg-zinc-900/60 backdrop-blur-sm rounded-xl p-3 shadow-xl hover:shadow-2xl transition-all duration-300 hover:bg-zinc-900/80 border border-zinc-800/50 flex flex-col items-center">
-                {/* Profile Image */}
-                <div className="relative mb-3 mx-auto">
-                  <div className="w-20 h-24 mx-auto rounded-lg overflow-hidden shadow-lg">
-                    <img
-                      src={creator.image}
-                      alt={creator.name}
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                      loading="lazy"
-                      draggable={false}
-                    />
-                  </div>
-                </div>
-
-                {/* Creator Info */}
-                <div className="text-center">
-                  <p className="text-gray-400 text-xs mb-1 font-medium">
-                    {creator.followers}
-                  </p>
-                  <h3 className="text-white font-bold text-sm leading-tight">
-                    {creator.name}
-                  </h3>
-                </div>
-              </div>
-            </div>
-          ))}
+        {/* Creator Cards - Mobile: Vertical List */}
+<div className="flex flex-col space-y-6 lg:hidden max-w-md mx-auto">
+  {creators.map((creator) => (
+    <div key={creator.id} className="group">
+      <div className="bg-zinc-900/60 backdrop-blur-sm rounded-xl p-4 shadow-xl hover:shadow-2xl transition-all duration-300 hover:bg-zinc-900/80 border border-zinc-800/50 
+                      flex flex-col items-center justify-between w-[318px] h-[400px] mx-auto">
+        
+        {/* Profile Image */}
+        <div className="w-[200px] h-[250px] rounded-xl overflow-hidden shadow-lg mb-4">
+          <img
+            src={creator.image}
+            alt={creator.name}
+            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+            loading="lazy"
+            draggable={false}
+          />
         </div>
+
+        {/* Creator Info */}
+        <div className="text-center">
+          <p className="text-gray-400 text-sm mb-1 font-medium">
+            {creator.followers}
+          </p>
+          <h3 className="text-white font-bold text-base leading-tight">
+            {creator.name}
+          </h3>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+
 
         {/* Creator Cards - Desktop: Horizontal scroll */}
         <div className="hidden lg:flex justify-center items-center gap-6 max-w-7xl mx-auto overflow-x-auto pb-4">
