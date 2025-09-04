@@ -8,6 +8,11 @@
 All colors MUST be HSL.
 */
 
+*{
+  margin: 0;
+  padding: 0;
+}
+
 @layer base {
   :root {
     /* Dark theme design system */
