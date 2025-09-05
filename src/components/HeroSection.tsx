@@ -194,9 +194,9 @@ const HeroSection = () => {
   </div>
 
   {/* Logo Carousel */}
-  <div className="relative z-10 pb-6 sm:pb-12 mt-4 sm:mt-auto w-[1200px]">
-    <LogoCarousel />
-  </div>
+  <div className="relative z-10 pb-6 sm:pb-12 mt-4 ">
+  <LogoCarousel />
+</div>
 </section>
 
       </div>
@@ -219,30 +219,32 @@ const LogoCarousel = () => {
 
   return (
     <div className="container mx-auto px-6 sm:px-8 max-w-5xl">
-      <div className="overflow-hidden border-t border-border/30 pt-6 sm:pt-8 relative">
-        {/* Left shadow fade */}
-        <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-16 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none"></div>
-        {/* Right shadow fade */}
-        <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-16 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none"></div>
-        <div className="relative">
-          <div className="flex space-x-10 sm:space-x-16 items-center logo-scroll">
-            {duplicatedLogos.map((logo, index) => (
-              <div
-                key={index}
-                className={`${logo.width} h-6 flex items-center justify-center flex-shrink-0`}
-              >
-                <img
-                  src={logo.src}
-                  alt={logo.alt}
-                  className="h-full object-contain"
-                  draggable="false"
-                />
-              </div>
-            ))}
+  <div className="overflow-hidden border-t border-border/30 pt-6 sm:pt-8 relative w-full flex justify-center">
+    {/* Left shadow fade */}
+    <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-16 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none"></div>
+    {/* Right shadow fade */}
+    <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-16 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none"></div>
+
+    <div className="relative w-full sm:w-[800px] md:w-[1000px] lg:w-[1200px]">
+      <div className="flex space-x-10 sm:space-x-16 items-center justify-center logo-scroll">
+        {duplicatedLogos.map((logo, index) => (
+          <div
+            key={index}
+            className={`${logo.width} h-6 flex items-center justify-center flex-shrink-0`}
+          >
+            <img
+              src={logo.src}
+              alt={logo.alt}
+              className="h-full object-contain"
+              draggable="false"
+            />
           </div>
-        </div>
+        ))}
       </div>
     </div>
+  </div>
+</div>
+
   );
 };
 
