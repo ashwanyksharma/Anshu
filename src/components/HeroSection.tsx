@@ -162,27 +162,31 @@ const HeroSection = () => {
       {/* CTA Buttons */}
       <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 items-stretch sm:items-center w-full sm:w-auto mb-2 sm:mb-0">
         <Button
-          size="lg"
-          className="w-full sm:w-auto bg-[rgb(228,40,0)] hover:bg-[#c53000] text-black text-base sm:text-lg md:text-xl px-6 sm:px-8 py-3 sm:py-4 rounded-full"
-        >
-          Discovery call
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="ml-2"
-          >
-            <path
-              d="M7 17L17 7M17 7H7M17 7V17"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </Button>
+  size="lg"
+  className="w-full sm:w-auto bg-[rgb(228,40,0)] hover:bg-[#c53000] text-black text-base sm:text-lg md:text-xl px-6 sm:px-8 py-3 sm:py-4 rounded-full"
+  data-cal-link="spark-trend-clarity-call/30min"
+  data-cal-namespace="30min"
+  data-cal-config='{"layout":"month_view"}'
+>
+  Discovery call
+  <svg
+    width="18"
+    height="18"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className="ml-2"
+  >
+    <path
+      d="M7 17L17 7M17 7H7M17 7V17"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+</Button>
+
         <Button
           variant="outline"
           size="lg"
