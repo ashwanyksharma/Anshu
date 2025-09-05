@@ -188,12 +188,20 @@ const HeroSection = () => {
 </Button>
 
         <Button
-          variant="outline"
-          size="lg"
-          className="w-full sm:w-auto border border-white text-white hover:bg-white/10 text-base sm:text-lg md:text-xl px-6 sm:px-8 py-3 sm:py-4 rounded-full"
-        >
-          Reach out
-        </Button>
+  asChild
+  variant="outline"
+  size="lg"
+  className="w-full sm:w-auto border border-white text-white hover:bg-white/10 text-base sm:text-lg md:text-xl px-6 sm:px-8 py-3 sm:py-4 rounded-full"
+>
+  <a
+    href="https://wa.me/message/IQTHGYV7MGIIL1"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Reach out
+  </a>
+</Button>
+
       </div>
     </div>
   </div>
