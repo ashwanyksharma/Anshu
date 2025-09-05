@@ -147,8 +147,8 @@ const HeroSection = () => {
     <div className="px-4 sm:px-6 md:px-8 text-left relative z-10 max-w-4xl">
       {/* Headline */}
       <h1
-  className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-snug mb-6 sm:mb-10 tracking-tight
-  bg-gradient-to-r from-[#ff6f61] via-[#ff3c2b] to-[#ff6f61] bg-clip-text text-transparent"
+  className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold leading-snug mb-6 sm:mb-10 tracking-tight
+  [background-image:linear-gradient(327deg,rgb(236,92,74)_9%,rgb(228,40,0)_21%,rgb(255,162,141)_56%)] bg-clip-text text-transparent uppercase"
 >
   WE HELP YOU FIND WHAT'S OFF,
   <br />
@@ -156,6 +156,7 @@ const HeroSection = () => {
   <br />
   AND SCALE WHAT WORKS
 </h1>
+
 
 
       {/* CTA Buttons */}
@@ -218,33 +219,31 @@ const LogoCarousel = () => {
   const duplicatedLogos = [...logos, ...logos, ...logos, ...logos, ...logos, ...logos];
 
   return (
-    <div className="container mx-auto px-6 sm:px-8 max-w-5xl">
-  <div className="overflow-hidden border-t border-border/30 pt-6 sm:pt-8 relative w-full flex justify-center">
-    {/* Left shadow fade */}
-    <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-16 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none"></div>
-    {/* Right shadow fade */}
-    <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-16 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none"></div>
-
-    <div className="relative w-full sm:w-[800px] md:w-[1000px] lg:w-[1200px]">
-      <div className="flex space-x-10 sm:space-x-16 items-center justify-center logo-scroll">
-        {duplicatedLogos.map((logo, index) => (
-          <div
-            key={index}
-            className={`${logo.width} h-6 flex items-center justify-center flex-shrink-0`}
-          >
-            <img
-              src={logo.src}
-              alt={logo.alt}
-              className="h-full object-contain"
-              draggable="false"
-            />
+    <div className="container mx-auto flex justify-center max-w-6xl">
+      <div className="overflow-hidden border-t border-border/30 pt-6 sm:pt-8 relative w-full sm:w-[800px] md:w-[1000px] lg:w-[1200px] mx-auto">
+        {/* Left shadow fade */}
+        <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-16 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none"></div>
+        {/* Right shadow fade */}
+        <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-16 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none"></div>
+        <div className="relative">
+          <div className="flex space-x-10 sm:space-x-16 items-center logo-scroll">
+            {duplicatedLogos.map((logo, index) => (
+              <div
+                key={index}
+                className={`${logo.width} h-6 flex items-center justify-center flex-shrink-0`}
+              >
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="h-full object-contain"
+                  draggable="false"
+                />
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
     </div>
-  </div>
-</div>
-
   );
 };
 

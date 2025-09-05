@@ -229,7 +229,7 @@ All colors MUST be HSL.
     .logo-scroll {
   display: flex;
   gap: 2.5rem; /* aapke space-x-10 / space-x-16 ke equivalent */
-  min-width: 300%;
+  min-width: 250%;
   animation: scroll 15s linear infinite; /* scroll speed */
 }
 
@@ -260,7 +260,7 @@ All colors MUST be HSL.
 .logo-scroll {
   display: flex;
   gap: 2.5rem;
-  min-width: 300%;
+  min-width: 250%;
   animation: scroll 15s linear infinite; /* default desktop */
   justify-content: center;
 }
