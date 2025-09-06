@@ -5,6 +5,7 @@ import logoImage from "@/assets/logo.png";
 import lenovoLogo from "@/assets/brand-logos/Lenovo.png";
 import wowLogo from "@/assets/brand-logos/Wow skin science.png";
 import groheLogo from "@/assets/brand-logos/Grohe.png";
+import Hdfcsky from "@/assets/brand-logos/Hdfc sky.png";
 import hyattLogo from "@/assets/brand-logos/Hyatt regency Delhi.png";
 
 import MobileNavigation from "@/components/MobileNavigation"; // Adjust path as necessary
@@ -236,9 +237,9 @@ const LogoCarousel = () => {
     { src: lenovoLogo, alt: "Lenovo", width: "w-20" },
     { src: wowLogo, alt: "WOW", width: "w-16" },
     { src: groheLogo, alt: "GROHE", width: "w-20" },
-    { src: hyattLogo, alt: "HYATT", width: "w-20" },
+    // { src: hyattLogo, alt: "HYATT", width: "w-20" },
     { src: lenovoLogo, alt: "Lenovo", width: "w-20" },
-    // { src: wowLogo, alt: "WOW", width: "w-16" },
+    { src: Hdfcsky, alt: "WOW", width: "w-16" },
     // { src: groheLogo, alt: "GROHE", width: "w-20" }
   ];
 
