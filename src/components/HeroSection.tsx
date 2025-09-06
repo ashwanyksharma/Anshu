@@ -4,7 +4,7 @@ import heroBg from "@/assets/hero-bg.avif";
 import logoImage from "@/assets/logo.png";
 import lenovoLogo from "@/assets/brand-logos/Lenovo.png";
 import wowLogo from "@/assets/brand-logos/Wow skin science.png";
-import groheLogo from "@/assets/brand-logos/Wow momo.png";
+import groheLogo from "@/assets/brand-logos/Grohe.png";
 import hyattLogo from "@/assets/brand-logos/Hyatt regency Delhi.png";
 
 import MobileNavigation from "@/components/MobileNavigation"; // Adjust path as necessary
@@ -239,10 +239,10 @@ const LogoCarousel = () => {
     { src: hyattLogo, alt: "HYATT", width: "w-20" },
     { src: lenovoLogo, alt: "Lenovo", width: "w-20" },
     // { src: wowLogo, alt: "WOW", width: "w-16" },
-    { src: groheLogo, alt: "GROHE", width: "w-20" }
+    // { src: groheLogo, alt: "GROHE", width: "w-20" }
   ];
 
-  const duplicatedLogos = [...logos, ...logos, ...logos, ...logos, ...logos, ...logos];
+  const duplicatedLogos = [...logos, ...logos, ...logos, ...logos, ...logos, ...logos, ...logos, ...logos, ...logos, ...logos, ...logos, ...logos];
 
   return (
     <div className="container mx-auto flex justify-center max-w-6xl">
