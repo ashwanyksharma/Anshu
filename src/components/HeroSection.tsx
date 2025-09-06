@@ -237,8 +237,8 @@ const LogoCarousel = () => {
     { src: lenovoLogo, alt: "Lenovo", width: "w-20" },
     { src: wowLogo, alt: "WOW", width: "w-16" },
     { src: groheLogo, alt: "GROHE", width: "w-20" },
-    // { src: hyattLogo, alt: "HYATT", width: "w-20" },
-    { src: lenovoLogo, alt: "Lenovo", width: "w-20" },
+    { src: hyattLogo, alt: "HYATT", width: "w-20" },
+    // { src: lenovoLogo, alt: "Lenovo", width: "w-20" },
     { src: Hdfcsky, alt: "WOW", width: "w-16" },
     // { src: groheLogo, alt: "GROHE", width: "w-20" }
   ];
