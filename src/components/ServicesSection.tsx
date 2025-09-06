@@ -6,21 +6,21 @@ const ServicesSection = () => {
       number: "1",
       title: "CLARITY BEFORE CREATION",
       description:
-        "We audit your brand from the inside out. Split what clicks and what holds you back, lay the strategy before the first design.",
+        "We study your brand from the inside out.Spot what clicks and what holds you back.Lay the strategy before the first design.",
       videoSrc: "/videos/webdev.mp4",
     },
     {
       number: "2",
       title: "IDENTITY IN MOTION",
       description:
-        "Build a brand system that moves and lives across all channels. We create comprehensive visual guidelines and brand experiences.",
+        "Build a brand system that moves, not just looks good.Every element — from tone to typography — in sync.Designed to adapt, connect, and last.",
       videoSrc: "/videos/appdev.mp4",
     },
     {
       number: "3",
       title: "LAUNCH & MOMENTUM",
       description:
-        "Put your brand in front of the right audiences. Targeted launch plans to bring visibility to your new image.",
+        "Put your brand in front of the right audience.Targeted campaigns backed by sharp creative.Refined over time for lasting traction.",
       videoSrc: "/videos/cloud.mp4",
     },
   ];

@@ -142,8 +142,9 @@ const HeroSection = () => {
 
 
         {/* Hero Content */}
-<section className="min-h-[75vh] flex flex-col justify-start sm:justify-center relative pl-4 sm:pl-12 md:pl-20 lg:pl-28">
-  <div className="flex-1 flex items-start sm:items-center py-6 sm:py-12">
+<section className=" min-h-[55vh] sm:min-h-[75vh] flex flex-col justify-start sm:justify-center relative pl-4 sm:pl-12 md:pl-20 lg:pl-28">
+  <div className="flex-1 flex items-start sm:items-center py-2 sm:py-8 lg:py-12">
+
     <div className="px-4 sm:px-6 md:px-8 text-left relative z-10 max-w-4xl">
       {/* Headline */}
       <h1
@@ -162,16 +163,22 @@ const HeroSection = () => {
       {/* CTA Buttons */}
       <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 items-stretch sm:items-center w-full sm:w-auto mb-2 sm:mb-0">
         <Button
-  size="lg"
-  className="w-full sm:w-auto bg-[rgb(228,40,0)] hover:bg-[#c53000] text-black text-base sm:text-lg md:text-xl px-6 sm:px-8 py-3 sm:py-4 rounded-full"
+  className="
+    w-full sm:w-auto 
+    bg-[rgb(228,40,0)] hover:bg-[#c53000] 
+    text-lg sm:text-base md:text-xl 
+    px-8 sm:px-6 md:px-8 
+    py-4 sm:py-3 md:py-4 
+    rounded-full
+  "
   data-cal-link="spark-trend-clarity-call/30min"
   data-cal-namespace="30min"
   data-cal-config='{"layout":"month_view"}'
 >
   Discovery call
   <svg
-    width="18"
-    height="18"
+    width="20"
+    height="20"
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -187,11 +194,18 @@ const HeroSection = () => {
   </svg>
 </Button>
 
-        <Button
+
+       <Button
   asChild
   variant="outline"
-  size="lg"
-  className="w-full sm:w-auto border border-white text-white hover:bg-white/10 text-base sm:text-lg md:text-xl px-6 sm:px-8 py-3 sm:py-4 rounded-full"
+  className="
+    w-full sm:w-auto
+    border border-white text-white hover:bg-white/10
+    text-lg sm:text-base md:text-xl
+    px-8 sm:px-6 md:px-8
+    py-4 sm:py-3 md:py-4
+    rounded-full
+  "
 >
   <a
     href="https://wa.me/message/IQTHGYV7MGIIL1"
@@ -224,7 +238,7 @@ const LogoCarousel = () => {
     { src: groheLogo, alt: "GROHE", width: "w-20" },
     { src: hyattLogo, alt: "HYATT", width: "w-20" },
     { src: lenovoLogo, alt: "Lenovo", width: "w-20" },
-    { src: wowLogo, alt: "WOW", width: "w-16" },
+    // { src: wowLogo, alt: "WOW", width: "w-16" },
     { src: groheLogo, alt: "GROHE", width: "w-20" }
   ];
 
@@ -232,30 +246,31 @@ const LogoCarousel = () => {
 
   return (
     <div className="container mx-auto flex justify-center max-w-6xl">
-      <div className="overflow-hidden border-t border-border/30 pt-6 sm:pt-8 relative w-full sm:w-[800px] md:w-[1000px] lg:w-[1200px] mx-auto">
-        {/* Left shadow fade */}
-        <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-16 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none"></div>
-        {/* Right shadow fade */}
-        <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-16 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none"></div>
-        <div className="relative">
-          <div className="flex space-x-10 sm:space-x-16 items-center logo-scroll">
-            {duplicatedLogos.map((logo, index) => (
-              <div
-                key={index}
-                className={`${logo.width} h-6 flex items-center justify-center flex-shrink-0`}
-              >
-                <img
-                  src={logo.src}
-                  alt={logo.alt}
-                  className="h-full object-contain"
-                  draggable="false"
-                />
-              </div>
-            ))}
+  <div className="overflow-hidden border-t border-border/30 pt-6 sm:pt-8 relative w-full sm:w-[800px] md:w-[1000px] lg:w-[1200px] mx-auto">
+    {/* Left shadow fade */}
+    <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-16 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none"></div>
+    {/* Right shadow fade */}
+    <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-16 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none"></div>
+    <div className="relative">
+      <div className="flex items-center logo-scroll space-x-8 sm:space-x-12 md:space-x-20 py-6 sm:py-8 px-4 sm:px-8">
+        {duplicatedLogos.map((logo, index) => (
+          <div
+            key={index}
+            className={`${logo.width} h-10 sm:h-12 md:h-14 flex items-center justify-center flex-shrink-0`}
+          >
+            <img
+              src={logo.src}
+              alt={logo.alt}
+              className="h-full object-contain"
+              draggable="false"
+            />
           </div>
-        </div>
+        ))}
       </div>
     </div>
+  </div>
+</div>
+
   );
 };
 
