@@ -143,89 +143,87 @@ const HeroSection = () => {
 
 
         {/* Hero Content */}
-<section className=" min-h-[65vh] sm:min-h-[75vh] flex flex-col justify-start sm:justify-center relative pl-4 sm:pl-12 md:pl-20 lg:pl-28">
-  <div className="flex-1 flex items-start sm:items-center py-2 sm:py-8 lg:py-12">
+<section className="min-h-[65vh] lg:min-h-[70vh] flex flex-col justify-start lg:justify-center relative pl-4 lg:pl-28">
+  <div className="flex-1 flex items-start lg:items-center py-2 lg:py-12">
 
-    <div className="px-4 sm:px-6 md:px-8 text-left relative z-10 max-w-4xl">
+    <div className="px-4 text-left relative z-10 max-w-4xl">
       {/* Headline */}
       <h1
-  className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold leading-snug mb-6 sm:mb-10 tracking-tight
-  [background-image:linear-gradient(327deg,rgb(236,92,74)_9%,rgb(228,40,0)_21%,rgb(255,162,141)_56%)] bg-clip-text text-transparent uppercase"
->
-  WE HELP YOU FIND WHAT'S OFF,
-  <br />
-  RETHINK WHAT MATTERS,
-  <br />
-  AND SCALE WHAT WORKS
-</h1>
-
-
+        className="text-3xl lg:text-5xl font-extrabold leading-snug mb-6 lg:mb-10 tracking-tight
+        [background-image:linear-gradient(327deg,rgb(236,92,74)_9%,rgb(228,40,0)_21%,rgb(255,162,141)_56%)] 
+        bg-clip-text text-transparent uppercase"
+      >
+        WE HELP YOU FIND WHAT'S OFF,
+        <br />
+        RETHINK WHAT MATTERS,
+        <br />
+        AND SCALE WHAT WORKS
+      </h1>
 
       {/* CTA Buttons */}
-      <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 items-stretch sm:items-center w-full sm:w-auto mb-2 sm:mb-0">
+      <div className="flex flex-col lg:flex-row gap-3 lg:gap-6 items-stretch lg:items-center w-full lg:w-auto mb-2 lg:mb-0">
         <Button
-  className="
-    w-full sm:w-auto 
-    bg-[rgb(228,40,0)] hover:bg-[#c53000] 
-    text-lg sm:text-base md:text-xl 
-    px-8 sm:px-6 md:px-8 
-    py-4 sm:py-3 md:py-4 
-    rounded-full
-  "
-  data-cal-link="spark-trend-clarity-call/30min"
-  data-cal-namespace="30min"
-  data-cal-config='{"layout":"month_view"}'
->
-  Discovery call
-  <svg
-    width="20"
-    height="20"
-    viewBox="0 0 24 24"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    className="ml-2"
-  >
-    <path
-      d="M7 17L17 7M17 7H7M17 7V17"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-</Button>
+          className="
+            w-full lg:w-auto 
+            bg-[rgb(228,40,0)] hover:bg-[#c53000] 
+            text-lg lg:text-xl 
+            px-8 lg:px-8 
+            py-4 lg:py-4 
+            rounded-full
+          "
+          data-cal-link="spark-trend-clarity-call/30min"
+          data-cal-namespace="30min"
+          data-cal-config='{\"layout\":\"month_view\"}'
+        >
+          Discovery call
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="ml-2"
+          >
+            <path
+              d="M7 17L17 7M17 7H7M17 7V17"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </Button>
 
-
-       <Button
-  asChild
-  variant="outline"
-  className="
-    w-full sm:w-auto
-    border border-white text-white hover:bg-white/10
-    text-lg sm:text-base md:text-xl
-    px-8 sm:px-6 md:px-8
-    py-4 sm:py-3 md:py-4
-    rounded-full
-  "
->
-  <a
-    href="https://wa.me/message/IQTHGYV7MGIIL1"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Reach out
-  </a>
-</Button>
-
+        <Button
+          asChild
+          variant="outline"
+          className="
+            w-full lg:w-auto
+            border border-white text-white hover:bg-white/10
+            text-lg lg:text-xl
+            px-8 lg:px-8
+            py-4 lg:py-4
+            rounded-full
+          "
+        >
+          <a
+            href="https://wa.me/message/IQTHGYV7MGIIL1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Reach out
+          </a>
+        </Button>
       </div>
     </div>
   </div>
 
   {/* Logo Carousel */}
-  <div className="relative z-10 pb-6 sm:pb-12 mt-4 ">
-  <LogoCarousel />
-</div>
+  <div className="relative z-10 pb-6 lg:pb-12 mt-4">
+    <LogoCarousel />
+  </div>
 </section>
+
 
       </div>
     </div>
