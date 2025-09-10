@@ -127,9 +127,9 @@ function CreatorsSection() {
 
         {/* Show More Button on Mobile */}
         <div className="lg:hidden text-center mt-6">
-          <button className="text-orange-500 hover:text-orange-400 transition-colors duration-300 text-sm font-medium">
+          {/* <button className="text-orange-500 hover:text-orange-400 transition-colors duration-300 text-sm font-medium">
             View All Creators →
-          </button>
+          </button> */}
         </div>
       </div>
     </section>
