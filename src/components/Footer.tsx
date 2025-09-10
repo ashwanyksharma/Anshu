@@ -1,4 +1,4 @@
-import { Twitter, Linkedin, Facebook } from "lucide-react";
+import { Twitter, Linkedin, Facebook , Instagram } from "lucide-react";
 
 const Footer = () => {
   const handleSocialClick = (platform: string) => {
@@ -17,27 +17,34 @@ const Footer = () => {
         <div className="flex flex-col items-center space-y-6 sm:space-y-8">
           {/* Header with Navigation */}
           <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-5xl gap-6 lg:gap-0">
-            {/* Social Icons */}
-            <div className="flex gap-3 sm:gap-4 order-2 lg:order-1">
-              <button
-                onClick={() => handleSocialClick('Facebook')}
-                className="w-10 h-10 sm:w-12 sm:h-12 bg-transparent border border-gray-600 rounded-full flex items-center justify-center hover:bg-brand-orange hover:border-brand-orange transition-all duration-300 group"
-              >
-                <Facebook className="w-4 h-4 sm:w-5 sm:h-5 text-text-secondary group-hover:text-white transition-colors duration-300" />
-              </button>
-              <button
-                onClick={() => handleSocialClick('LinkedIn')}
-                className="w-10 h-10 sm:w-12 sm:h-12 bg-transparent border border-gray-600 rounded-full flex items-center justify-center hover:bg-brand-orange hover:border-brand-orange transition-all duration-300 group"
-              >
-                <Linkedin className="w-4 h-4 sm:w-5 sm:h-5 text-text-secondary group-hover:text-white transition-colors duration-300" />
-              </button>
-              <button
-                onClick={() => handleSocialClick('Twitter')}
-                className="w-10 h-10 sm:w-12 sm:h-12 bg-transparent border border-gray-600 rounded-full flex items-center justify-center hover:bg-brand-orange hover:border-brand-orange transition-all duration-300 group"
-              >
-                <Twitter className="w-4 h-4 sm:w-5 sm:h-5 text-text-secondary group-hover:text-white transition-colors duration-300" />
-              </button>
-            </div>
+  {/* Social Icons */}
+  <div className="flex gap-3 sm:gap-4 order-2 lg:order-1">
+    {/* Facebook */}
+    {/* <button
+      onClick={() => window.open('https://www.facebook.com', '_blank')}
+      className="w-10 h-10 sm:w-12 sm:h-12 bg-transparent border border-gray-600 rounded-full flex items-center justify-center hover:bg-brand-orange hover:border-brand-orange transition-all duration-300 group"
+    >
+      <Facebook className="w-4 h-4 sm:w-5 sm:h-5 text-text-secondary group-hover:text-white transition-colors duration-300" />
+    </button> */}
+
+    {/* LinkedIn */}
+    <button
+      onClick={() => window.open('https://share.google/pX82h3nOn5a6xrw0t', '_blank')}
+      className="w-10 h-10 sm:w-12 sm:h-12 bg-transparent border border-gray-600 rounded-full flex items-center justify-center hover:bg-brand-orange hover:border-brand-orange transition-all duration-300 group"
+    >
+      <Linkedin className="w-4 h-4 sm:w-5 sm:h-5 text-text-secondary group-hover:text-white transition-colors duration-300" />
+    </button>
+
+    {/* Instagram */}
+    <button
+      onClick={() => window.open('https://www.instagram.com/sparktrend.media?igsh=dTlqeTJmNXR6ZGd4', '_blank')}
+      className="w-10 h-10 sm:w-12 sm:h-12 bg-transparent border border-gray-600 rounded-full flex items-center justify-center hover:bg-brand-orange hover:border-brand-orange transition-all duration-300 group"
+    >
+      <Instagram className="w-4 h-4 sm:w-5 sm:h-5 text-text-secondary group-hover:text-white transition-colors duration-300" />
+    </button>
+  </div>
+
+
 
             {/* Orange Lightning Icon */}
             <div className="flex items-center justify-center order-1 lg:order-2">

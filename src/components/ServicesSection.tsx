@@ -38,10 +38,29 @@ const ServicesSection = () => {
               Services
             </span>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary max-w-4xl mx-auto leading-tight font-['Montserrat'] px-4">
-            BRANDS DON'T BREAK AT SCALE —{" "}
-            <span className="hero-text">THEY CRACK AT THE FOUNDATION</span>
-          </h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary max-w-6xl mx-auto leading-tight font-['Montserrat'] px-4">
+  <span className="block">
+    {"BRANDS DON'T BREAK AT SCALE —".split("").map((letter, i) => (
+      <span
+        key={i}
+        className="inline-block transition-all duration-300 hover:scale-150 hover:-rotate-3 hover:text-orange-500 cursor-default"
+      >
+        {letter === " " ? "\u00A0" : letter}
+      </span>
+    ))}
+  </span>
+  <span className="block mt-2 hero-text">
+    {"THEY CRACK AT THE FOUNDATION".split("").map((letter, i) => (
+      <span
+        key={i}
+        className="inline-block transition-all duration-300 hover:scale-150 hover:-rotate-3 hover:text-orange-500 cursor-default"
+      >
+        {letter === " " ? "\u00A0" : letter}
+      </span>
+    ))}
+  </span>
+</h2>
+
         </div>
 
     

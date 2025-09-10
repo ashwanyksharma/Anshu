@@ -149,16 +149,17 @@ const HeroSection = () => {
     <div className="px-4 text-left relative z-10 max-w-4xl mt-10 sm:mt-10 lg:mt-16">
       {/* Headline */}
       <h1
-        className="text-3xl lg:text-5xl font-extrabold leading-snug mb-6 lg:mb-10 tracking-tight
-        [background-image:linear-gradient(327deg,rgb(236,92,74)_9%,rgb(228,40,0)_21%,rgb(255,162,141)_56%)] 
-        bg-clip-text text-transparent uppercase"
-      >
-        WE HELP YOU FIND WHAT'S OFF,
-        <br />
-        RETHINK WHAT MATTERS,
-        <br />
-        AND SCALE WHAT WORKS
-      </h1>
+  className="text-3xl lg:text-5xl font-extrabold leading-snug mb-14 lg:mb-10 tracking-tight
+  [background-image:linear-gradient(327deg,rgb(236,92,74)_9%,rgb(228,40,0)_21%,rgb(255,162,141)_56%)] 
+  bg-clip-text text-transparent uppercase"
+>
+  WE HELP YOU FIND WHAT'S OFF,
+  <br />
+  RETHINK WHAT MATTERS,
+  <br />
+  AND SCALE WHAT WORKS
+</h1>
+
 
       {/* CTA Buttons */}
       <div className="flex flex-col lg:flex-row gap-3 lg:gap-6 items-stretch lg:items-center w-full lg:w-auto mb-2 lg:mb-0">
