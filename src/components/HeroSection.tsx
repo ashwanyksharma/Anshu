@@ -143,10 +143,10 @@ const HeroSection = () => {
 
 
         {/* Hero Content */}
-<section className="min-h-[65vh] lg:min-h-[70vh] flex flex-col justify-start lg:justify-center relative pl-4 lg:pl-28">
+<section className="min-h-[65vh] lg:min-h-[75vh] flex flex-col justify-start lg:justify-center relative pl-4 lg:pl-28">
   <div className="flex-1 flex items-start lg:items-center py-2 lg:py-12">
 
-    <div className="px-4 text-left relative z-10 max-w-4xl">
+    <div className="px-4 text-left relative z-10 max-w-4xl mt-10 sm:mt-10 lg:mt-16">
       {/* Headline */}
       <h1
         className="text-3xl lg:text-5xl font-extrabold leading-snug mb-6 lg:mb-10 tracking-tight
