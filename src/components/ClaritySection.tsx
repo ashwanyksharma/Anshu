@@ -32,27 +32,37 @@ function ClaritySection() {
           </div>
           <h2
   id="clarity-heading"
-  className="text-3xl md:text-5xl font-bold text-text-primary max-w-4xl mx-auto leading-tight"
+  className="text-2xl sm:text-3xl md:text-5xl font-bold text-text-primary max-w-4xl mx-auto leading-tight text-center break-words"
 >
-  {"FROM CLARITY TO SCALE —".split("").map((letter, i) => (
-    <span
-      key={i}
-      className="inline-block transition-all duration-300 hover:scale-150 hover:-rotate-3 hover:text-orange-500 cursor-default"
-    >
-      {letter === " " ? "\u00A0" : letter}
+  {"FROM CLARITY TO SCALE —".split(" ").map((word, wi) => (
+    <span key={wi} className="inline-block mr-2">
+      {word.split("").map((letter, li) => (
+        <span
+          key={li}
+          className="inline-block transition-all duration-300 hover:scale-150 hover:-rotate-3 hover:text-orange-500 cursor-default"
+        >
+          {letter}
+        </span>
+      ))}
     </span>
   ))}
+
   <span className="block mt-2">
-    {"WITHOUT THE GUESSWORK".split("").map((letter, i) => (
-      <span
-        key={i}
-        className="inline-block transition-all duration-300 hover:scale-150 hover:-rotate-3 hover:text-orange-500 cursor-default"
-      >
-        {letter === " " ? "\u00A0" : letter}
+    {"WITHOUT THE GUESSWORK".split(" ").map((word, wi) => (
+      <span key={wi} className="inline-block mr-2">
+        {word.split("").map((letter, li) => (
+          <span
+            key={li}
+            className="inline-block transition-all duration-300 hover:scale-150 hover:-rotate-3 hover:text-orange-500 cursor-default"
+          >
+            {letter}
+          </span>
+        ))}
       </span>
     ))}
   </span>
 </h2>
+
 
         </div>
 
