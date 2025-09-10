@@ -38,24 +38,33 @@ const ServicesSection = () => {
               Services
             </span>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary max-w-6xl mx-auto leading-tight font-['Montserrat'] px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary max-w-6xl mx-auto leading-tight font-['Montserrat'] px-4 text-center break-words">
   <span className="block">
-    {"BRANDS DON'T BREAK AT SCALE —".split("").map((letter, i) => (
-      <span
-        key={i}
-        className="inline-block transition-all duration-300 hover:scale-150 hover:-rotate-3 hover:text-orange-500 cursor-default"
-      >
-        {letter === " " ? "\u00A0" : letter}
+    {"BRANDS DON'T BREAK AT SCALE —".split(" ").map((word, wi) => (
+      <span key={wi} className="inline-block mr-2">
+        {word.split("").map((letter, li) => (
+          <span
+            key={li}
+            className="inline-block transition-all duration-300 hover:scale-150 hover:-rotate-3 hover:text-orange-500 cursor-default"
+          >
+            {letter}
+          </span>
+        ))}
       </span>
     ))}
   </span>
+
   <span className="block mt-2 hero-text">
-    {"THEY CRACK AT THE FOUNDATION".split("").map((letter, i) => (
-      <span
-        key={i}
-        className="inline-block transition-all duration-300 hover:scale-150 hover:-rotate-3 hover:text-orange-500 cursor-default"
-      >
-        {letter === " " ? "\u00A0" : letter}
+    {"THEY CRACK AT THE FOUNDATION".split(" ").map((word, wi) => (
+      <span key={wi} className="inline-block mr-2">
+        {word.split("").map((letter, li) => (
+          <span
+            key={li}
+            className="inline-block transition-all duration-300 hover:scale-150 hover:-rotate-3 hover:text-orange-500 cursor-default"
+          >
+            {letter}
+          </span>
+        ))}
       </span>
     ))}
   </span>
