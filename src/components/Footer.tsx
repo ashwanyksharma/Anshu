@@ -1,4 +1,4 @@
-import { Twitter, Linkedin, Facebook , Instagram } from "lucide-react";
+import { Twitter, Linkedin, Facebook, Instagram } from "lucide-react";
 
 const Footer = () => {
   const handleSocialClick = (platform: string) => {
@@ -17,32 +17,32 @@ const Footer = () => {
         <div className="flex flex-col items-center space-y-6 sm:space-y-8">
           {/* Header with Navigation */}
           <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-5xl gap-6 lg:gap-0">
-  {/* Social Icons */}
-  <div className="flex gap-3 sm:gap-4 order-2 lg:order-1">
-    {/* Facebook */}
-    {/* <button
+            {/* Social Icons */}
+            <div className="flex gap-3 sm:gap-4 order-2 lg:order-1">
+              {/* Facebook */}
+              {/* <button
       onClick={() => window.open('https://www.facebook.com', '_blank')}
       className="w-10 h-10 sm:w-12 sm:h-12 bg-transparent border border-gray-600 rounded-full flex items-center justify-center hover:bg-brand-orange hover:border-brand-orange transition-all duration-300 group"
     >
       <Facebook className="w-4 h-4 sm:w-5 sm:h-5 text-text-secondary group-hover:text-white transition-colors duration-300" />
     </button> */}
 
-    {/* LinkedIn */}
-    <button
-      onClick={() => window.open('https://share.google/pX82h3nOn5a6xrw0t', '_blank')}
-      className="w-10 h-10 sm:w-12 sm:h-12 bg-transparent border border-gray-600 rounded-full flex items-center justify-center hover:bg-brand-orange hover:border-brand-orange transition-all duration-300 group"
-    >
-      <Linkedin className="w-4 h-4 sm:w-5 sm:h-5 text-text-secondary group-hover:text-white transition-colors duration-300" />
-    </button>
+              {/* LinkedIn */}
+              <button
+                onClick={() => window.open('https://share.google/pX82h3nOn5a6xrw0t', '_blank')}
+                className="w-10 h-10 sm:w-12 sm:h-12 bg-transparent border border-gray-600 rounded-full flex items-center justify-center hover:bg-brand-orange hover:border-brand-orange transition-all duration-300 group"
+              >
+                <Linkedin className="w-4 h-4 sm:w-5 sm:h-5 text-text-secondary group-hover:text-white transition-colors duration-300" />
+              </button>
 
-    {/* Instagram */}
-    <button
-      onClick={() => window.open('https://www.instagram.com/sparktrend.media?igsh=dTlqeTJmNXR6ZGd4', '_blank')}
-      className="w-10 h-10 sm:w-12 sm:h-12 bg-transparent border border-gray-600 rounded-full flex items-center justify-center hover:bg-brand-orange hover:border-brand-orange transition-all duration-300 group"
-    >
-      <Instagram className="w-4 h-4 sm:w-5 sm:h-5 text-text-secondary group-hover:text-white transition-colors duration-300" />
-    </button>
-  </div>
+              {/* Instagram */}
+              <button
+                onClick={() => window.open('https://www.instagram.com/sparktrend.media?igsh=dTlqeTJmNXR6ZGd4', '_blank')}
+                className="w-10 h-10 sm:w-12 sm:h-12 bg-transparent border border-gray-600 rounded-full flex items-center justify-center hover:bg-brand-orange hover:border-brand-orange transition-all duration-300 group"
+              >
+                <Instagram className="w-4 h-4 sm:w-5 sm:h-5 text-text-secondary group-hover:text-white transition-colors duration-300" />
+              </button>
+            </div>
 
 
 
@@ -50,7 +50,7 @@ const Footer = () => {
             <div className="flex items-center justify-center order-1 lg:order-2">
               <div className="w-10 h-10 sm:w-12 sm:h-12 bg-brand-orange rounded-full flex items-center justify-center">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="sm:w-6 sm:h-6">
-                  <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="white"/>
+                  <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="white" />
                 </svg>
               </div>
             </div>
@@ -75,10 +75,10 @@ const Footer = () => {
           {/* Main Text */}
           <div className="text-center">
             <p className="text-white text-base sm:text-lg font-montserrat">
-              Build a powerful agency site
+
             </p>
             <p className="text-white text-base sm:text-lg font-montserrat">
-              with love.
+
             </p>
           </div>
 

@@ -22,8 +22,7 @@ const FAQSection = () => {
   ];
 
   const handleScheduleCall = () => {
-    // Add your scheduling logic here
-    console.log("Schedule call clicked");
+    window.open("https://wa.me/message/IQTHGYV7MGIIL1", "_blank");
   };
 
   return (
@@ -60,7 +59,7 @@ const FAQSection = () => {
               </AccordionItem>
             ))}
           </Accordion>
-          
+
           {/* CTA Button with same spacing as FAQ items */}
           <div className="mt-3 sm:mt-4">
             <Button
